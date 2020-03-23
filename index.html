@@ -9,6 +9,10 @@
     .border {
         border-style: dotted;
     }
+
+    .padding    {
+        padding
+    }
 </style>
 
 </head>
@@ -27,11 +31,25 @@
     var h2Element = document.getElementById("titleLine");
     var divShit = document.getElementById("divEdit");
 
+
     function button1(clickedElement)    {
         h2Element.style.border = "5px solid gray";
         h2Element.style.borderStyle = "dotted";
         clickedElement.style.border = "5px solid gray";
         clickedElement.style.borderStyle = "dotted";
+
+        h2Element.classList.remove('round');
+        clickedElement.classList.remove('round');
+
+    }
+
+    function button2(clickedElement)    {
+        h2Element.style.padding = "10%";
+        clickedElement.style.padding = "10%";
+
+        h2Element.classList.remove('round');
+        clickedElement.classList.remove('round');
+
     }
 
 
