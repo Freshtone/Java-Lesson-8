@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    .border {
+        border-style: dotted;
+    }
+</style>
+
+</head>
+<body>
+
+    <h2 id="titleLine">Change this shit bro</h2>
+    <div id="divEdit">This shit gon change too bro</div>
+
+    <button onclick="button1(this)">Border</button>
+    <button onclick="button2(this)">Padding</button>
+    <button onclick="button3(this)">Margin</button>
+    <button onclick="button4(this)">Background Colour</button>
+    
+
+<script>
+    var h2Element = document.getElementById("titleLine");
+    var divShit = document.getElementById("divEdit");
+
+    function button1(clickedElement)    {
+        h2Element.style.border = "5px solid gray";
+        h2Element.style.borderStyle = "dotted";
+        clickedElement.style.border = "5px solid gray";
+        clickedElement.style.borderStyle = "dotted";
+    }
+
+
+</script>
+</body>
+</html>
+
+
+<!--Lag fem forskjellige navngitte css-stiler som regulerer ulike ting, 
+for eksempel, border, padding, margin , background-color og color. 
+Lag en div, og gjør det sånn at når du velger en checkbox, så skrus den tilhørenden effekten på på div-en. 
+For å få til dette trenger dere funksjonen toggle, som kan brukes slik:
+
+
+<head>
+    <style>
+        .stilig {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div id="bla">Bla bla bla</div>
+    <input id="chk" type="checkbox" onchange="toggleStyle()" />
+    <script>
+        function toggleStyle() {
+            var isChecked = document.getElementById('chk').checked;
+            document.getElementById('bla').classList.toggle('stilig', isChecked);
+        }
+    </script>
+</body>
