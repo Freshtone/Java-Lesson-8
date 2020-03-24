@@ -6,25 +6,18 @@
     <title>Document</title>
 <style>
 
-    .border {
-        border-style: dotted;
-    }
-
-    .padding    {
-        padding
-    }
 </style>
 
 </head>
 <body>
 
-    <h2 id="titleLine">Change this shit bro</h2>
-    <div id="divEdit">This shit gon change too bro</div>
+    <h2 id="titleLine">Watch this space...</h2>
+    <div id="divEdit">You might want to also watch this space</div>
 
-    <button onclick="button1(this)">Border</button>
-    <button onclick="button2(this)">Padding</button>
-    <button onclick="button3(this)">Margin</button>
-    <button onclick="button4(this)">Background Colour</button>
+    <input type="checkbox" onclick="button1(this)">Border</button>
+    <input type="checkbox" onclick="button2(this)">Padding</button>
+    <input type="checkbox" onclick="button3(this)">Margin</button>
+    <input type="checkbox" onclick="button4(this)">Background Colour</button>
     
 
 <script>
@@ -33,27 +26,38 @@
 
 
     function button1(clickedElement)    {
-        h2Element.style.border = "5px solid gray";
-        h2Element.style.borderStyle = "dotted";
-        clickedElement.style.border = "5px solid gray";
-        clickedElement.style.borderStyle = "dotted";
-
-        h2Element.classList.remove('round');
-        clickedElement.classList.remove('round');
-
+            h2Element.style.border = "5px solid gray";
+            h2Element.style.borderStyle = "dotted";
+            clickedElement.style.border = "5px solid gray";
+            clickedElement.style.borderStyle = "dotted";
+            divShit.style.border = "5px solid gray";
+            divShit.style.border = "dotted";
     }
-
     function button2(clickedElement)    {
-        h2Element.style.padding = "10%";
-        clickedElement.style.padding = "10%";
-
-        h2Element.classList.remove('round');
-        clickedElement.classList.remove('round');
+            h2Element.style.padding = "1%";
+            clickedElement.style.padding = "1%";
 
     }
+    function button3(clickedElement)    {
+            h2Element.style.marginLeft = "150px";
+            clickedElement.style.marginLeft = "150px";
+            divShit.style.marginBottom = "50px";
+    }
 
+    function button4(clickedElement)    {
+            h2Element.style.backgroundColor = "blue";
+            clickedElement.style.backgroundColor = "green";
+            divShit.style.backgroundColor = "yellow";
+    }
+
+    function toggleStyle() {
+            var isChecked = document.getElementById('button1').checked;
+            document.getElementById('bla').classList.toggle('stilig', isChecked);
+        }
 
 </script>
+
+
 </body>
 </html>
 
